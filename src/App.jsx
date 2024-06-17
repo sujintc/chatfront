@@ -1,15 +1,21 @@
+
+
+
 import axios from "axios";
-import {UserContextProvider} from "./UserContext";
+import React from "react";
+import { UserContextProvider } from "./UserContext";
 import Routes from "./Routes";
 
-function App() {
-  axios.defaults.baseURL = 'https://chatback-tdid.onrender.com';
+// Configure Axios base URL
+axios.defaults.baseURL = 'https://chatcorrectedback.onrender.com';
 
+function App() {
   return (
     <UserContextProvider>
       <Routes />
     </UserContextProvider>
-  )
+  );
 }
 
-export default App
+export default App;
+
