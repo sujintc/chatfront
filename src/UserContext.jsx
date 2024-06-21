@@ -12,7 +12,7 @@ export function UserContextProvider({ children }) {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('https://chatcorrectedback.onrender.com', {
+        const response = await axios.get('https://chatback-tdid.onrender.com/profile', {
           withCredentials: true,
         });
         setId(response.data.id);

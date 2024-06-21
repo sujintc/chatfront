@@ -12,9 +12,9 @@ export default function RegisterAndLoginForm() {
 
   async function handleSubmit(ev) {
     ev.preventDefault();
-    const url = isLoginOrRegister === 'register' ? 'https://chatcorrectedback.onrender.com' : 'https://chatcorrectedback.onrender.com';
+    const url = isLoginOrRegister === 'register' ? 'https://chatback-tdid.onrender.com/register' : 'https://chatback-tdid.onrender.com/login';
     try {
-      const { data } = await axios.post(url, { username, password }, { withCredentials: true });
+      const { data } = await axios.post(url, { username, password }, { withCredentials: true, headers: ['Content-Type', 'Authorization'], },);
       setLoggedInUsername(username);
       setId(data.id);
     } catch (error) {
