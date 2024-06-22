@@ -21,7 +21,7 @@ export default function Chat() {
   }, [selectedUserId]);
 
   function connectToWs() {
-    const ws = new WebSocket('wss://tchatback-tdid.onrender.com'); // Use ws:// or wss:// based on your setup
+    const ws = new WebSocket('wss://chatback-tdid.onrender.com'); // Use ws:// or wss:// based on your setup
     setWs(ws);
     ws.addEventListener('message', handleMessage);
     ws.addEventListener('close', () => {
